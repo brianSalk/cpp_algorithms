@@ -1,4 +1,5 @@
 *
 */
-!c++20_algorithms.cpp
-!c++_algorithms.cpp
+!.gitignore
+!c++20_algorithms.h
+!c++_algorithms.h
