@@ -5,8 +5,7 @@
 #include <algorithm>
 #include <functional>
 #include <concepts>
-template <typename It,
-typename	std::enable_if<std::is_pointer<typename std::iterator_traits<It>::pointer>::value, bool>::type = true>
+template <typename It, typename std::iterator_traits<It>::pointer=nullptr>
 void n_partition(It beg, It end, std::initializer_list<std::function<bool(typename It::value_type)>> const& i_list) {
 	auto curr_pos = beg;
 	for (auto const& condition : i_list) {
