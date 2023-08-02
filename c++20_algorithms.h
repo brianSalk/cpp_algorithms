@@ -11,7 +11,7 @@
 
 template <typename It,typename std::iterator_traits<It>::pointer=nullptr,typename Pred>
 requires std::predicate<Pred,typename It::value_type>
-void n_partition2(It beg, It end, std::initializer_list<Pred> const& i_list) {
+void n_partition(It beg, It end, std::initializer_list<Pred> const& i_list) {
 	auto curr_pos = beg;
 	for (auto const& condition : i_list) {
 		for (auto it = curr_pos; it != end; ++it) {
